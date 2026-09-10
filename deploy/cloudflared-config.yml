@@ -1,0 +1,7 @@
+tunnel: b2f99d29-e891-4285-8f43-747bfc1c0f14
+credentials-file: /etc/cloudflared/b2f99d29-e891-4285-8f43-747bfc1c0f14.json
+no-autoupdate: true
+ingress:
+  - hostname: mimotion.ricksanchez12301.me
+    service: http://127.0.0.1:8501
+  - service: http_status:404

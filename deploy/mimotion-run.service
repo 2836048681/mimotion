@@ -1,0 +1,17 @@
+[Unit]
+Description=mimotion scheduled runner
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=mimotion
+Group=mimotion
+WorkingDirectory=/opt/mimotion
+EnvironmentFile=/etc/mimotion/mimotion.env
+ExecStart=/opt/mimotion/.venv/bin/python /opt/mimotion/scheduler.py
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/mimotion

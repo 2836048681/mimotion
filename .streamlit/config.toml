@@ -1,0 +1,19 @@
+[server]
+headless = true
+address = "127.0.0.1"
+port = 8501
+enableCORS = true
+corsAllowedOrigins = ["http://127.0.0.1:8501", "http://localhost:8501", "https://mimotion.ricksanchez12301.me"]
+allowedHosts = ["127.0.0.1", "localhost", "mimotion.ricksanchez12301.me"]
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"
+primaryColor = "#D8FF57"
+backgroundColor = "#0B0E0C"
+secondaryBackgroundColor = "#151B17"
+textColor = "#F4F6EF"
+font = "sans serif"

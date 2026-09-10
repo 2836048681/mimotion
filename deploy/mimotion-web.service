@@ -1,0 +1,22 @@
+[Unit]
+Description=mimotion Streamlit control panel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mimotion
+Group=mimotion
+WorkingDirectory=/opt/mimotion
+EnvironmentFile=/etc/mimotion/mimotion.env
+ExecStart=/opt/mimotion/.venv/bin/streamlit run /opt/mimotion/web_ui.py --server.address=127.0.0.1 --server.port=8501
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/mimotion
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+tunnel: REPLACE_WITH_TUNNEL_ID
+credentials-file: /etc/cloudflared/REPLACE_WITH_TUNNEL_ID.json
+
+ingress:
+  - hostname: mimotion.ricksanchez12301.me
+    service: http://127.0.0.1:8501
+  - service: http_status:404
